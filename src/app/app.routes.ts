@@ -4,12 +4,14 @@ import { DashboardComponent } from './components/user/dashboard/dashboard.compon
 import { LoginComponent } from './components/user/login/login.component';
 import { SignupComponent } from './components/user/signup/signup.component';
 import { SidebarComponent } from './components/admin/sidebar/sidebar.component';
+import { ArticleComponent } from './components/admin/article/article.component';
+import { UserComponent } from './components/admin/user/user.component';
 
 export const routes: Routes = [
     {
         path: '',
         redirectTo: 'dashborad',
-        pathMatch: 'full'   
+        pathMatch: 'full'
     },
     {
         path: '',
@@ -30,6 +32,23 @@ export const routes: Routes = [
     },
     {
         path: 'sidebar',
-        component: SidebarComponent
+        component: SidebarComponent,
+        children: [
+            {
+                path: '',
+                redirectTo: '/sidebar/(admin:articles)',
+                pathMatch: 'full'
+            },
+            {
+                path: 'articles',
+                component: ArticleComponent,
+                outlet: 'admin'
+            },
+            {
+                path: 'users',
+                component: UserComponent,
+                outlet: 'admin'
+            }
+        ]
     }
 ];
