@@ -9,6 +9,8 @@ import { ArticleComponent } from './components/admin/article/article.component';
 import { CommentComponent } from './components/admin/comment/comment.component';
 import { DashboardComponent } from './components/user/dashboard/dashboard.component';
 import { NavbarComponent } from './components/user/navbar/navbar.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,10 @@ import { NavbarComponent } from './components/user/navbar/navbar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
