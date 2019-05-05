@@ -11,6 +11,8 @@ import { DashboardComponent } from './components/user/dashboard/dashboard.compon
 import { NavbarComponent } from './components/user/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './components/user/login/login.component';
+import { SignupComponent } from './components/user/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ArticleComponent,
     CommentComponent,
     DashboardComponent,
-    NavbarComponent
+    NavbarComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

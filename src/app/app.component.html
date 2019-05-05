@@ -1,3 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<router-outlet name="navbar"></router-outlet>
+<div *ngIf="hideNavbarOutlet()">
+  <router-outlet name="navbar"></router-outlet>
+</div>
 <router-outlet></router-outlet>

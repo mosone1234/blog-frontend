@@ -30,4 +30,10 @@ export class AppComponent {
       }
     });
   }
+
+  public hideNavbarOutlet() {
+    return (this._router.url !== '/login') &&
+      (this._router.url.includes('/sidebar') !== true);
+  }
+
 }
